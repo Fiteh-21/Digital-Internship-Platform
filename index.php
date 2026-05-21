@@ -86,16 +86,68 @@ $categories = $stmt->fetchAll();
                         <?php
                         $icon = 'fas fa-briefcase';
                         $c = strtolower($cat['category']);
+                        
+                        // Comprehensive category icon mapping
                         if (strpos($c, 'it') !== false || strpos($c, 'software') !== false)
                             $icon = 'fas fa-laptop-code';
-                        if (strpos($c, 'marketing') !== false || strpos($c, 'sales') !== false)
+                        elseif (strpos($c, 'marketing') !== false || strpos($c, 'sales') !== false)
                             $icon = 'fas fa-bullhorn';
-                        if (strpos($c, 'finance') !== false || strpos($c, 'accounting') !== false)
+                        elseif (strpos($c, 'finance') !== false || strpos($c, 'accounting') !== false)
                             $icon = 'fas fa-chart-line';
-                        if (strpos($c, 'design') !== false || strpos($c, 'creative') !== false)
+                        elseif (strpos($c, 'design') !== false || strpos($c, 'creative') !== false)
                             $icon = 'fas fa-paint-brush';
-                        if (strpos($c, 'engineering') !== false)
+                        elseif (strpos($c, 'engineering') !== false)
                             $icon = 'fas fa-cogs';
+                        elseif (strpos($c, 'healthcare') !== false || strpos($c, 'medical') !== false)
+                            $icon = 'fas fa-stethoscope';
+                        elseif (strpos($c, 'education') !== false || strpos($c, 'training') !== false)
+                            $icon = 'fas fa-graduation-cap';
+                        elseif (strpos($c, 'human resources') !== false || strpos($c, 'hr') !== false)
+                            $icon = 'fas fa-people-arrows';
+                        elseif (strpos($c, 'business') !== false || strpos($c, 'management') !== false)
+                            $icon = 'fas fa-building';
+                        elseif (strpos($c, 'customer service') !== false)
+                            $icon = 'fas fa-headset';
+                        elseif (strpos($c, 'media') !== false || strpos($c, 'communication') !== false)
+                            $icon = 'fas fa-broadcast-tower';
+                        elseif (strpos($c, 'legal') !== false || strpos($c, 'law') !== false)
+                            $icon = 'fas fa-gavel';
+                        elseif (strpos($c, 'agriculture') !== false || strpos($c, 'environmental') !== false)
+                            $icon = 'fas fa-leaf';
+                        elseif (strpos($c, 'architecture') !== false || strpos($c, 'construction') !== false)
+                            $icon = 'fas fa-hammer';
+                        elseif (strpos($c, 'logistics') !== false || strpos($c, 'supply chain') !== false)
+                            $icon = 'fas fa-dolly';
+                        elseif (strpos($c, 'tourism') !== false || strpos($c, 'hospitality') !== false)
+                            $icon = 'fas fa-hotel';
+                        elseif (strpos($c, 'data science') !== false || strpos($c, 'ai') !== false)
+                            $icon = 'fas fa-brain';
+                        elseif (strpos($c, 'cybersecurity') !== false || strpos($c, 'networking') !== false)
+                            $icon = 'fas fa-shield-alt';
+                        elseif (strpos($c, 'banking') !== false || strpos($c, 'insurance') !== false)
+                            $icon = 'fas fa-university';
+                        elseif (strpos($c, 'economics') !== false || strpos($c, 'statistics') !== false)
+                            $icon = 'fas fa-chart-bar';
+                        elseif (strpos($c, 'science') !== false || strpos($c, 'research') !== false)
+                            $icon = 'fas fa-flask';
+                        elseif (strpos($c, 'multimedia') !== false || strpos($c, 'animation') !== false)
+                            $icon = 'fas fa-film';
+                        elseif (strpos($c, 'public administration') !== false)
+                            $icon = 'fas fa-landmark';
+                        elseif (strpos($c, 'social sciences') !== false)
+                            $icon = 'fas fa-users';
+                        elseif (strpos($c, 'journalism') !== false || strpos($c, 'publishing') !== false)
+                            $icon = 'fas fa-newspaper';
+                        elseif (strpos($c, 'pharmacy') !== false || strpos($c, 'biotechnology') !== false)
+                            $icon = 'fas fa-flask-vial';
+                        elseif (strpos($c, 'telecommunications') !== false)
+                            $icon = 'fas fa-phone';
+                        elseif (strpos($c, 'industrial') !== false || strpos($c, 'manufacturing') !== false)
+                            $icon = 'fas fa-industry';
+                        elseif (strpos($c, 'project management') !== false)
+                            $icon = 'fas fa-tasks';
+                        elseif (strpos($c, 'entrepreneurship') !== false || strpos($c, 'startups') !== false)
+                            $icon = 'fas fa-rocket';
                         ?>
                         <i class="<?= $icon ?> category-icon"></i>
                         <h3 class="category-item-title"><?= htmlspecialchars($cat['category']) ?></h3>

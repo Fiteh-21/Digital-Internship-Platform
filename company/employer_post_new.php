@@ -61,11 +61,37 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'employer') {
                             <div class="form-group" style="flex: 1;">
                                 <label class="form-label">Category</label>
                                 <select name="category" class="form-control" required>
+                                    <option value="">-- Select Category --</option>
                                     <option value="IT & Software">IT & Software</option>
                                     <option value="Marketing & Sales">Marketing & Sales</option>
                                     <option value="Finance & Accounting">Finance & Accounting</option>
                                     <option value="Design & Creative">Design & Creative</option>
                                     <option value="Engineering">Engineering</option>
+                                    <option value="Healthcare and Medical">Healthcare and Medical</option>
+                                    <option value="Education and Training">Education and Training</option>
+                                    <option value="Human Resources (HR)">Human Resources (HR)</option>
+                                    <option value="Business and Management">Business and Management</option>
+                                    <option value="Customer Service">Customer Service</option>
+                                    <option value="Media and Communication">Media and Communication</option>
+                                    <option value="Legal and Law">Legal and Law</option>
+                                    <option value="Agriculture and Environmental Studies">Agriculture and Environmental Studies</option>
+                                    <option value="Architecture and Construction">Architecture and Construction</option>
+                                    <option value="Logistics and Supply Chain">Logistics and Supply Chain</option>
+                                    <option value="Tourism and Hospitality">Tourism and Hospitality</option>
+                                    <option value="Data Science and AI">Data Science and AI</option>
+                                    <option value="Cybersecurity and Networking">Cybersecurity and Networking</option>
+                                    <option value="Banking and Insurance">Banking and Insurance</option>
+                                    <option value="Economics and Statistics">Economics and Statistics</option>
+                                    <option value="Science and Research">Science and Research</option>
+                                    <option value="Multimedia and Animation">Multimedia and Animation</option>
+                                    <option value="Public Administration">Public Administration</option>
+                                    <option value="Social Sciences">Social Sciences</option>
+                                    <option value="Journalism and Publishing">Journalism and Publishing</option>
+                                    <option value="Pharmacy and Biotechnology">Pharmacy and Biotechnology</option>
+                                    <option value="Telecommunications">Telecommunications</option>
+                                    <option value="Industrial and Manufacturing">Industrial and Manufacturing</option>
+                                    <option value="Project Management">Project Management</option>
+                                    <option value="Entrepreneurship and Startups">Entrepreneurship and Startups</option>
                                     <option value="Other">Other</option>
                                 </select>
                             </div>

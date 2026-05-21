@@ -9,16 +9,37 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'student') {
 
 $student_id = $_SESSION['user_id'];
 
+// Handle search functionality
+$search_query = isset($_GET['search']) ? trim($_GET['search']) : '';
+$search_not_found = false;
+
 // Fetch all available internships not yet applied to by this student
-$stmt = $pdo->prepare("
+$query = "
     SELECT i.*, u.name as employer_name 
     FROM internships i 
     JOIN users u ON i.employer_id = u.id 
     WHERE i.id NOT IN (SELECT internship_id FROM applications WHERE student_id = ?)
     ORDER BY i.created_at DESC
-");
+";
+$stmt = $pdo->prepare($query);
 $stmt->execute([$student_id]);
 $available_internships = $stmt->fetchAll();
+
+// Filter by search query if provided
+if (!empty($search_query)) {
+    $filtered_internships = array_filter($available_internships, function($internship) use ($search_query) {
+        return stripos($internship['title'], $search_query) !== false || 
+               stripos($internship['employer_name'], $search_query) !== false ||
+               stripos($internship['category'], $search_query) !== false;
+    });
+    
+    if (empty($filtered_internships)) {
+        $search_not_found = true;
+        $available_internships = [];
+    } else {
+        $available_internships = $filtered_internships;
+    }
+}
 ?>
 
 <div class="dashboard">
@@ -57,6 +78,30 @@ $available_internships = $stmt->fetchAll();
 
         <section id="browse" class="mb-8">
             <h3 class="mb-4">Available Internships</h3>
+            
+            <!-- Search Bar -->
+            <div class="search-bar-container" style="margin-bottom: 2rem;">
+                <form method="GET" action="" style="display: flex; gap: 0.5rem;">
+                    <div style="flex: 1; display: flex; gap: 0.5rem;">
+                        <input type="text" name="search" class="form-control" placeholder="Search internships by title, company, or category..." value="<?= htmlspecialchars($search_query) ?>" style="flex: 1;">
+                        <button type="submit" class="btn btn-primary" style="padding: 0.75rem 1.5rem;">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+                    <?php if (!empty($search_query)): ?>
+                        <a href="student_dashboard.php" class="btn btn-outline" style="padding: 0.75rem 1.5rem;">
+                            <i class="fas fa-times"></i> Clear
+                        </a>
+                    <?php endif; ?>
+                </form>
+            </div>
+
+            <?php if($search_not_found): ?>
+                <div class="alert text-warning" style="text-align: center; padding: 2rem;">
+                    <i class="fas fa-info-circle"></i> <strong>Not Available</strong> - No internships found matching "<strong><?= htmlspecialchars($search_query) ?></strong>". Try a different search term.
+                </div>
+            <?php endif; ?>
+
             <?php if(empty($available_internships)): ?>
                 <p class="text-muted">No new internships available at the moment.</p>
             <?php else: ?>
