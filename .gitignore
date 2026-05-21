@@ -1,0 +1,30 @@
+# Environment Variables
+.env
+
+# Uploads and Assets
+uploads/
+assets/profiles/
+assets/resumes/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependencies
+node_modules/
+vendor/
+
+# PHP/Web Server
+error_log
+php_errors.log
