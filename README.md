@@ -5,30 +5,35 @@ InternHub is a comprehensive, three-way platform designed to bridge the gap betw
 ## 🚀 Key Features
 
 ### 👨‍🎓 For Students
-*   **Professional Profiles**: Build a comprehensive digital resume with profile pictures, headlines, and professional details.
-*   **Advanced Search**: Browse internships by category, location, and stipend.
-*   **Application Tracking**: Manage and track the status of all your applications in real-time.
-*   **Direct Messaging**: Receive instant notifications and detailed feedback directly from system administrators.
+
+- **Professional Profiles**: Build a comprehensive digital resume with profile pictures, headlines, and professional details.
+- **Advanced Search**: Browse internships by category, location, and stipend.
+- **Application Tracking**: Manage and track the status of all your applications in real-time.
+- **Direct Messaging**: Receive instant notifications and detailed feedback directly from system administrators.
 
 ### 🏢 For Employers
-*   **Opportunity Management**: Post, edit, and manage internship listings with ease.
-*   **Applicant Tracking System (ATS)**: Review student profiles, download resumes, and manage application statuses (Accepted/Rejected) with custom messages.
-*   **Company Dashboard**: Get a high-level overview of active postings and pending applications.
+
+- **Opportunity Management**: Post, edit, and manage internship listings with ease.
+- **Applicant Tracking System (ATS)**: Review student profiles, download resumes, and manage application statuses (Accepted/Rejected) with custom messages.
+- **Company Dashboard**: Get a high-level overview of active postings and pending applications.
 
 ### 🛡️ For Administrators
-*   **System Oversight**: Comprehensive dashboard to manage all students and companies.
-*   **Mass Communication**: Direct messaging system to contact any user or company on the platform.
-*   **Content Moderation**: Ability to delete internships with automated notifications to the posting company.
-*   **System Analytics**: Real-time tracking of total students, companies, and applications.
+
+- **System Oversight**: Comprehensive dashboard to manage all students and companies.
+- **Mass Communication**: Direct messaging system to contact any user or company on the platform.
+- **Content Moderation**: Ability to delete internships with automated notifications to the posting company.
+- **System Analytics**: Real-time tracking of total students, companies, and applications.
 
 ## 🛠️ Technology Stack
-*   **Backend**: PHP 8.x
-*   **Database**: MySQL
-*   **Frontend**: HTML5, Vanilla CSS3 (Custom Design System), JavaScript (ES6)
-*   **UI Components**: Bootstrap 5 (for interactive Modals & Admin UI), FontAwesome 6
-*   **Typography**: Google Fonts (Outfit)
+
+- **Backend**: PHP 8.x
+- **Database**: MySQL
+- **Frontend**: HTML5, Vanilla CSS3 (Custom Design System), JavaScript (ES6)
+- **UI Components**: Bootstrap 5 (for interactive Modals & Admin UI), FontAwesome 6
+- **Typography**: Google Fonts (Outfit)
 
 ## 📁 Project Structure
+
 ```text
 anti/
 ├── admin/          # Administrative control panel & APIs
@@ -44,25 +49,38 @@ anti/
 ## ⚙️ Installation & Setup
 
 1.  **Clone the Repository**:
+
     ```bash
-    git clone [repository-url]
+    git clone https://github.com/Fiteh-21/Digital-Internship-Platform.git
     ```
 
 2.  **Database Configuration**:
-    *   Import the SQL schema located in `database/` into your MySQL server.
-    *   Update `includes/db.php` with your local database credentials (host, user, password, database name).
+    - Import the SQL schema located in `database/` into your MySQL server.
+    - Update `includes/db.php` with your local database credentials (host, user, password, database name).
 
 3.  **Local Environment**:
-    *   Ensure you are using a local server like **MAMP**, **XAMPP**, or **WAMP**.
-    *   Set the root directory to the project folder.
+    - Ensure you are using a local server like **MAMP**, **XAMPP**, or **WAMP**.
+    - Set the root directory to the project folder.
 
 4.  **Admin Access**:
-    *   Default admin credentials can be configured in the `users` table with the role `admin`.
+    - Default admin credentials can be configured in the `users` table with the role `admin`.
 
 ## 📍 Contact & Support
-*   **Location**: Adama, Ethiopia
-*   **Email**: internhub@gmail.com
-*   **Website**: InternHub.com
+
+- **Location**: Adama, Ethiopia
+- **Email**: internhub@gmail.com
+- **Website**: InternHub.com
 
 ---
-*Developed with focus on efficiency and professional excellence.*
+
+_Developed with focus on efficiency and professional excellence._
+
+## 👥 Group Members
+
+| No. | Name              | ID Number    |
+| --- | ----------------- | ------------ |
+| 1   | Bethlehem Chemeda | UGR/34068/16 |
+| 2   | Birhane Tamirat   | UGR/34108/16 |
+| 3   | Fiteh Tesfaye     | UGR/34460/16 |
+| 4   | Lidiya Getachew   | UGR/34823/16 |
+| 5   | Mahder Seifu      | UGR/34843/16 |
