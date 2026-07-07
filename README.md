@@ -75,12 +75,4 @@ anti/
 
 _Developed with focus on efficiency and professional excellence._
 
-## 👥 Group Members
 
-| No. | Name              | ID Number    |
-| --- | ----------------- | ------------ |
-| 1   | Bethlehem Chemeda | UGR/34068/16 |
-| 2   | Birhane Tamirat   | UGR/34108/16 |
-| 3   | Fiteh Tesfaye     | UGR/34460/16 |
-| 4   | Lidiya Getachew   | UGR/34823/16 |
-| 5   | Mahder Seifu      | UGR/34843/16 |
